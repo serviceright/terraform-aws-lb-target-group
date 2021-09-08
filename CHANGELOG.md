@@ -7,14 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.0.1]
-
 ### Added
 
-- Implement support for `xyz` resource
-- Document the usage of the module in README.md
-- Document the usage of examples
-- Add unit tests for basic use cases
+- Implement support for `aws_lb_target_group` resource
 
 <!-- markdown-link-check-disable -->
 

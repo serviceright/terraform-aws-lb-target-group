@@ -119,6 +119,16 @@ section {
         END
       }
 
+      variable "protocol" {
+        type        = string
+        description = <<-END
+          Protocol to use for routing traffic to the targets. Should be one of
+          `GENEVE`, `HTTP`, `HTTPS`, `TCP`, `TCP_UDP`, `TLS`, or `UDP`.
+          Required when `target_type` is instance, `ip` or `alb`. Does not apply
+          when `target_type` is `lambda`.
+        END
+      }
+
       variable "protocol_version" {
         type        = string
         default     = "HTTP1"
@@ -208,6 +218,7 @@ section {
             HTTP/HTTPS ALB and HTTP NLB. Only applies to HTTP/HTTPS.
           END
         }
+
         attribute "port" {
           type        = string
           description = <<-END
@@ -235,6 +246,8 @@ section {
             seconds for HTTP health checks.
           END
         }
+
+
 
         attribute "unhealthy_threshold" {
           type        = number

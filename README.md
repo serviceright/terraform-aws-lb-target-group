@@ -8,7 +8,7 @@
 
 # terraform-aws-lb-target-group
 
-A [Terraform] module to create and manage a
+A [Terraform] module to create and manage an
 [Amazon Load Balancer Target Group](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html)
 on [Amazon Web Services (AWS)][aws].
 
@@ -85,6 +85,13 @@ See [variables.tf] and [examples/] for details and use-cases.
   Port on which targets receive traffic, unless overridden when
   registering a specific target. Required when `target_type` is
   `instance` or `ip`. Does not apply when `target_type` is `lambda`.
+
+- [**`protocol`**](#var-protocol): *(Optional `string`)*<a name="var-protocol"></a>
+
+  Protocol to use for routing traffic to the targets. Should be one of
+  `GENEVE`, `HTTP`, `HTTPS`, `TCP`, `TCP_UDP`, `TLS`, or `UDP`.
+  Required when `target_type` is instance, `ip` or `alb`. Does not apply
+  when `target_type` is `lambda`.
 
 - [**`protocol_version`**](#var-protocol_version): *(Optional `string`)*<a name="var-protocol_version"></a>
 

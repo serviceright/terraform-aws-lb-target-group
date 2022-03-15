@@ -37,7 +37,7 @@ section {
   title   = "terraform-aws-lb-target-group"
   toc     = true
   content = <<-END
-    A [Terraform] module to create and manage a
+    A [Terraform] module to create and manage an
     [Amazon Load Balancer Target Group](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html)
     on [Amazon Web Services (AWS)][aws].
 

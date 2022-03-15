@@ -306,8 +306,9 @@ section {
       variable "vpc_id" {
         type        = string
         description = <<-END
-          Name of the target group. If omitted, Terraform will assign a random,
-          unique name. Forces new resource.
+          Identifier of the VPC in which to create the target group. Required
+          when `target_type` is `instance`, `ip` or `alb`. Does not apply when
+          `target_type` is `lambda`.
         END
       }
 

@@ -247,8 +247,6 @@ section {
           END
         }
 
-
-
         attribute "unhealthy_threshold" {
           type        = number
           description = <<-END

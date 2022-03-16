@@ -168,9 +168,7 @@ section {
       variable "health_check" {
         type        = object(health_check)
         description = <<-END
-          Determines how the load balancer selects targets when routing
-          requests. Only applicable for Application Load Balancer Target Groups.
-          The value is `round_robin` or `least_outstanding_requests`.
+          Health check configuration block. 
         END
 
         attribute "enabled" {

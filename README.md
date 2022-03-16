@@ -120,9 +120,7 @@ See [variables.tf] and [examples/] for details and use-cases.
 
 - [**`health_check`**](#var-health_check): *(Optional `object(health_check)`)*<a name="var-health_check"></a>
 
-  Determines how the load balancer selects targets when routing
-  requests. Only applicable for Application Load Balancer Target Groups.
-  The value is `round_robin` or `least_outstanding_requests`.
+  Health check configuration block.
 
   The `health_check` object accepts the following attributes:
 

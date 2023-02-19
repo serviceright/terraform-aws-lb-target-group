@@ -141,7 +141,6 @@ variable "target_groups" {
   description = "The target groups we need to use"
   default = []
   type = list(object({
-    target_group_arn = string
     target_id = string
   }))
 }

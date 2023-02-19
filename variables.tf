@@ -140,9 +140,7 @@ variable "tags" {
 variable "target_groups" {
   description = "The target groups we need to use"
   default = []
-  type = list(object({
-    target_id = string
-  }))
+  type = list(string)
 }
 
 # ----------------------------------------------------------------------------------------------------------------------

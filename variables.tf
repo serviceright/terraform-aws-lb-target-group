@@ -137,6 +137,15 @@ variable "tags" {
   default     = {}
 }
 
+variable "target_groups" {
+  description = "The target groups we need to use"
+  default = []
+  type = list(object({
+    target_group_arn = string
+    target_id = string
+  }))
+}
+
 # ----------------------------------------------------------------------------------------------------------------------
 # MODULE CONFIGURATION PARAMETERS
 # These variables are used to configure the module.

@@ -60,3 +60,10 @@ resource "aws_lb_target_group" "target_group" {
 
   depends_on = [var.module_depends_on]
 }
+
+# create the attachment dynamically
+resource "aws_lb_target_group_attachment" "target_group_attachment" {
+  for_each = var.target_groups
+  target_group_arn = each.value.target_group_arn
+  target_id        = each.value.target_id
+}
